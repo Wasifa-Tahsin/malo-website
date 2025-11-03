@@ -5,7 +5,7 @@ export default function Banner() {
   return (
     <div className=  'py-10 px-20'     style={{
         background: "linear-gradient(90deg, #073879 0%, #75D3FE 100%)",
-        height: "1358px",
+      
       }}>
         <div className='container mx-auto text-white flex justify-between items-center'>
       <div>
