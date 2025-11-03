@@ -4,56 +4,58 @@ import Image from "next/image";
 import { FaHeart, FaStar, FaChevronLeft, FaChevronRight, FaThumbsUp } from "react-icons/fa";
 
 export default function Products() {
-  const products = [
-    {
-      id: 1,
-      title: "Office Wear",
-      desc: "Suits, Smart Dresses...",
-      price: "150-300",
-      img: "https://i.ibb.co/6bFC7xz/image1.png",
-      rating: 4.8,
-    },
-    {
-      id: 2,
-      title: "Office Wear",
-      desc: "Suits, Smart Dresses...",
-      price: "150-300",
-      img: "https://i.ibb.co/8z6rHcC/image2.png",
-      rating: 4.8,
-    },
-    {
-      id: 3,
-      title: "Office Wear",
-      desc: "Suits, Smart Dresses...",
-      price: "150-300",
-      img: "https://i.ibb.co/GcVn8QZ/image3.png",
-      rating: 4.8,
-    },
-    {
-      id: 4,
-      title: "Office Wear",
-      desc: "Suits, Smart Dresses...",
-      price: "150-300",
-      img: "https://i.ibb.co/RQrZ7mS/image4.png",
-      rating: 4.8,
-    },
-    {
-      id: 5,
-      title: "Office Wear",
-      desc: "Suits, Smart Dresses...",
-      price: "150-300",
-      img: "https://i.ibb.co/xm3tZTy/image5.png",
-      rating: 4.8,
-    },
-    {
-      id: 5,
-      title: "Office Wear",
-      desc: "Suits, Smart Dresses...",
-      price: "150-300",
-      img: "https://i.ibb.co/xm3tZTy/image5.png",
-      rating: 4.8,
-    },
-  ];
+  
+    const products = [
+  {
+    id: 1,
+    title: "Office Wear",
+    desc: "Suits, Smart Dresses...",
+    price: "150-300",
+    img: "/assets/products/product1.png",
+    rating: 4.8,
+  },
+  {
+    id: 2,
+    title: "Office Wear",
+    desc: "Suits, Smart Dresses...",
+    price: "150-300",
+    img: "/assets/products/product2.png",
+    rating: 4.8,
+  },
+  {
+    id: 3,
+    title: "Office Wear",
+    desc: "Suits, Smart Dresses...",
+    price: "150-300",
+    img: "/assets/products/product3.png",
+    rating: 4.8,
+  },
+  {
+    id: 4,
+    title: "Office Wear",
+    desc: "Suits, Smart Dresses...",
+    price: "150-300",
+    img: "/assets/products/product4.png",
+    rating: 4.8,
+  },
+  {
+    id: 5,
+    title: "Office Wear",
+    desc: "Suits, Smart Dresses...",
+    price: "150-300",
+    img: "/assets/products/product1.png",
+    rating: 4.8,
+  },
+  {
+    id: 6,
+    title: "Office Wear",
+    desc: "Suits, Smart Dresses...",
+    price: "150-300",
+    img: "/assets/products/product2.png", // ✅ if this is inside /public/assets
+    rating: 4.8,
+  },
+];
+
 
   return (
     <section className="container mx-auto px-6 py-10">
@@ -87,7 +89,7 @@ export default function Products() {
             {/* Product Image */}
             <div className="relative w-full h-48 bg-blue-50 rounded-t-xl">
               <Image
-                src={'/assets/categories/Img.svg'}
+                src={product.img}
                 alt={product.title}
                 fill
                 className="object-contain rounded-t-xl p-4"
