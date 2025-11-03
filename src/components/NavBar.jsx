@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import React from "react";
 import {
   FaBars,
   FaMapMarkerAlt,
@@ -14,6 +13,7 @@ import {
 export default function NavBar() {
   const [showCategory, setShowCategory] = useState(false);
   const [showLocation, setShowLocation] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const categories = [
     "Agriculture & Forestry / Wildlife",
@@ -38,18 +38,25 @@ export default function NavBar() {
   ];
 
   return (
-    <header className="shadow-sm border-b">
+    <header className="w-full shadow-sm border-b bg-white">
       {/* 🔹 Top Navbar */}
-      <div className="container mx-auto px-4 py-3 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div className=" px-4 py-3 flex flex-col md:flex-row items-center justify-between gap-4">
         {/* Logo */}
-        <div className="flex items-center flex-shrink-0">
+        <div className="flex items-center justify-between w-full md:w-auto">
           <Image
             alt="logo"
-            src="/assets/malologo (2).png" // ✅ Correct path (no /public)
+            src="/assets/malologo (2).png"
             width={110}
             height={90}
             className="object-contain"
           />
+          {/* Mobile Menu Toggle */}
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            className="md:hidden text-gray-700 text-xl"
+          >
+            <FaBars />
+          </button>
         </div>
 
         {/* Search Bar */}
@@ -57,12 +64,12 @@ export default function NavBar() {
           <input
             type="search"
             placeholder="Search Product"
-            className="w-full pl-10 pr-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500"
+            className="w-full pl-10 pr-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-500"
           />
           <FaSearch className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500" />
         </div>
 
-        {/* Buttons */}
+        {/* Auth Buttons */}
         <div className="flex items-center gap-3">
           <button className="px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition">
             Sign Up
@@ -74,9 +81,13 @@ export default function NavBar() {
       </div>
 
       {/* 🔹 Bottom Navbar */}
-      <nav className="bg-gray-50 shadow-inner flex flex-wrap justify-between items-center px-6 py-3 relative">
+      <nav
+        className={`bg-gray-50 shadow-inner px-6 py-3 transition-all duration-300 ${
+          menuOpen ? "block" : "hidden md:flex"
+        } flex-wrap justify-between items-center relative`}
+      >
         {/* Category & Location */}
-        <div className="flex items-center gap-4 flex-wrap">
+        <div className="flex items-center gap-4 flex-wrap mb-4 md:mb-0">
           {/* Category Dropdown */}
           <div className="relative">
             <button
@@ -148,7 +159,7 @@ export default function NavBar() {
         </div>
 
         {/* Menu Links */}
-        <ul className="hidden md:flex gap-6 text-gray-700 text-sm font-medium">
+        <ul className="flex flex-col md:flex-row gap-4 md:gap-6 text-gray-700 text-sm font-medium">
           <li className="text-red-600 cursor-pointer">Home</li>
           <li className="cursor-pointer">Product</li>
           <li className="cursor-pointer">Service</li>
@@ -159,7 +170,7 @@ export default function NavBar() {
         </ul>
 
         {/* Icons */}
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-4 mt-3 md:mt-0">
           <button className="text-gray-600 hover:text-gray-800">
             <FaShoppingCart />
           </button>
