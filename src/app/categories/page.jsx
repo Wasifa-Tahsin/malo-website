@@ -6,27 +6,27 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 const categoriesData = [
   {
     title: "Agriculture",
-    img: "/images/categories/agriculture.png",
+    img: "https://i.ibb.co.com/nsSmCVxp/image-box-5.png",
   },
   {
     title: "Artist/Personality /Public Figure",
-    img: "/images/categories/artist.png",
+    img: "https://i.ibb.co.com/nsSmCVxp/image-box-5.png",
   },
   {
     title: "Automotive Vehicles",
-    img: "/images/categories/automotive.png",
+    img: "https://i.ibb.co.com/nsSmCVxp/image-box-5.png",
   },
   {
     title: "Education",
-    img: "/images/categories/education.png",
+    img: "https://i.ibb.co.com/nsSmCVxp/image-box-5.png",
   },
   {
     title: "Food & Hospitality",
-    img: "/images/categories/food.png",
+    img: "https://i.ibb.co.com/nsSmCVxp/image-box-5.png",
   },
   {
     title: "Health & Medical Services",
-    img: "/images/categories/health.png",
+    img: "https://i.ibb.co.com/nsSmCVxp/image-box-5.png",
   },
 ];
 

@@ -13,7 +13,7 @@ export default function Banner() {
 
       <div>
         <Image 
-          src={''} 
+          src={'/public/assets/categories/Img.svg'} 
           width={623} 
           height={598} 
           alt="banner" 
