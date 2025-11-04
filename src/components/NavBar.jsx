@@ -40,7 +40,7 @@ export default function NavBar() {
   return (
     <header className="w-full shadow-sm border-b bg-white">
       {/* 🔹 Top Navbar */}
-      <div className=" px-4 py-3 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div className=" px-4 py-1 flex flex-col md:flex-row items-center justify-between gap-4">
         {/* Logo */}
         <div className="flex items-center justify-between w-full md:w-auto">
           <Image
