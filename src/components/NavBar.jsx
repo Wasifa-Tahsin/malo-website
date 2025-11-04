@@ -71,12 +71,12 @@ export default function NavBar() {
 
         {/* Auth Buttons */}
         <div className="flex items-center gap-3">
-          <button className="px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition">
+          <a href="/authpages/signup" className="px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition">
             Sign Up
-          </button>
-          <button className="px-4 py-2 border border-red-500 text-red-500 rounded-lg hover:bg-red-50 transition">
+          </a>
+          <a href="/authpages/signin" className="px-4 py-2 border border-red-500 text-red-500 rounded-lg hover:bg-red-50 transition">
             Sign In
-          </button>
+          </a>
         </div>
       </div>
 
@@ -160,7 +160,7 @@ export default function NavBar() {
 
         {/* Menu Links */}
         <ul className="flex flex-col md:flex-row gap-4 md:gap-6 text-gray-700 text-sm font-medium">
-          <li className="text-red-600 cursor-pointer">Home</li>
+        <a href={"/"}>  <li className="text-red-600 cursor-pointer">Home</li></a>
           <li className="cursor-pointer">Product</li>
           <li className="cursor-pointer">Service</li>
           <li className="cursor-pointer">About Us</li>
